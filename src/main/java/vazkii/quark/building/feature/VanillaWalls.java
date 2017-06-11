@@ -19,7 +19,7 @@ import vazkii.quark.base.module.Feature;
 
 public class VanillaWalls extends Feature {
 
-	boolean stone, granite, diorite, andesite, sandstone, redSandstone, stoneBricks, bricks, quartz, prismarine, prismarineBricks, darkPrismarine, purpurBlock, endBricks;
+	boolean stone, granite, diorite, andesite, smooth_granite, smooth_diorite, smooth_andesite, sandstone, redSandstone, stoneBricks, bricks, quartz, prismarine, prismarineBricks, darkPrismarine, purpurBlock, endBricks;
 
 	@Override
 	public void setupConfig() {
@@ -27,6 +27,9 @@ public class VanillaWalls extends Feature {
 		granite = loadPropBool("Granite", "", true);
 		diorite = loadPropBool("Diorite", "", true);
 		andesite = loadPropBool("Andesite", "", true);
+		smooth_granite = loadPropBool("Polished Granite", "", true);
+		smooth_diorite = loadPropBool("Polished Diorite", "", true);
+		smooth_andesite = loadPropBool("Polished Andesite", "", true);
 		sandstone = loadPropBool("Sandstone", "", true);
 		redSandstone = loadPropBool("Red Sandstone", "", true);
 		stoneBricks = loadPropBool("Stone Bricks", "", true);
@@ -45,6 +48,9 @@ public class VanillaWalls extends Feature {
 		add("stone_granite", Blocks.STONE, 1, granite);
 		add("stone_diorite", Blocks.STONE, 3, diorite);
 		add("stone_andesite", Blocks.STONE, 5, andesite);
+		add("stone_granite_smooth", Blocks.STONE, 2, smooth_granite);
+		add("stone_diorite_smooth", Blocks.STONE, 4, smooth_diorite);
+		add("stone_andesite_smooth", Blocks.STONE, 6, smooth_andesite);
 		add("sandstone", Blocks.SANDSTONE, 0, sandstone);
 		add("red_sandstone", Blocks.RED_SANDSTONE, 0, redSandstone);
 		add("stonebrick", Blocks.STONEBRICK, 0, stoneBricks);

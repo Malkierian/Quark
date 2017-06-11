@@ -11,6 +11,7 @@
 package vazkii.quark.building.feature;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStone;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -18,11 +19,12 @@ import vazkii.arl.block.BlockModSlab;
 import vazkii.arl.block.BlockModStairs;
 import vazkii.quark.base.block.BlockQuarkStairs;
 import vazkii.quark.base.module.Feature;
+import vazkii.quark.building.block.BlockPolishedStone;
 import vazkii.quark.building.block.slab.BlockVanillaSlab;
 
 public class VanillaStairsAndSlabs extends Feature {
 
-	boolean stone, granite, diorite, andesite, endBricks, prismarine, prismarineBricks, darkPrismarine, redNetherBricks;
+	boolean stone, granite, diorite, andesite, smooth_granite, smooth_diorite, smooth_andesite, endBricks, prismarine, prismarineBricks, darkPrismarine, redNetherBricks;
 
 	@Override
 	public void setupConfig() {
@@ -30,6 +32,9 @@ public class VanillaStairsAndSlabs extends Feature {
 		granite = loadPropBool("Granite", "", true);
 		diorite = loadPropBool("Diorite", "", true);
 		andesite = loadPropBool("Andesite", "", true);
+		smooth_granite = loadPropBool("Polished Granite", "", true);
+		smooth_diorite = loadPropBool("Polished Diorite", "", true);
+		smooth_andesite = loadPropBool("Polished Andesite", "", true);
 		endBricks = loadPropBool("End Bricks", "", true);
 		prismarine = loadPropBool("Prismarine", "", true);
 		prismarineBricks = loadPropBool("Prismarine Bricks", "", true);
@@ -43,6 +48,9 @@ public class VanillaStairsAndSlabs extends Feature {
 		add("stone_granite", Blocks.STONE, 1, granite);
 		add("stone_diorite", Blocks.STONE, 3, diorite);
 		add("stone_andesite", Blocks.STONE, 5, andesite);
+		add("stone_granite_smooth", Blocks.STONE, 2, smooth_granite);
+		add("stone_diorite_smooth", Blocks.STONE, 4, smooth_diorite);
+		add("stone_andesite_smooth", Blocks.STONE, 6, smooth_andesite);
 		add("end_bricks", Blocks.END_BRICKS, 0, endBricks);
 		add("prismarine", Blocks.PRISMARINE, 0, prismarine);
 		add("prismarine_bricks", Blocks.PRISMARINE, 1, prismarineBricks);
